@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="Item name" />
+
+
+    <TextView
+        android:id="@+id/token_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="start"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/token_price"
+        app:layout_constraintEnd_toEndOf="@+id/token_price"
+        app:layout_constraintStart_toStartOf="@+id/token_price"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="0.0" />
+
+    <TextView
+        android:id="@+id/token_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/token_value"
+        tools:text="000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
